@@ -1,0 +1,306 @@
+/* Reset básico e configurações globais */
+body, h1, h2, h3, p, ul, li, a, details, summary {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Mude para a fonte que desejar */
+    line-height: 1.6;
+}
+
+body {
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    color: #333; /* Cor principal do texto */
+}
+
+.container {
+    width: 90%;
+    max-width: 960px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 20px 0;
+}
+
+/* Cabeçalho */
+#cabecalho {
+    background-color: #2c3e50; /* Azul escuro */
+    color: #ecf0f1; /* Branco suave */
+    padding: 40px 0;
+    text-align: center;
+}
+#cabecalho h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+#cabecalho .subtitulo {
+    font-size: 1.2em;
+    color: #bdc3c7; /* Cinza claro */
+}
+.placeholder-image { /* Para placeholders de imagem */
+    background-color: #ccc;
+    color: #555;
+    padding: 20px;
+    text-align: center;
+    margin: 15px auto;
+    border: 1px dashed #aaa;
+    max-width: 300px; /* ajuste conforme necessário */
+}
+
+/* Seção VSL */
+#vsl {
+    background-color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+}
+#vsl h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #3498db; /* Azul vibrante */
+}
+.video-placeholder {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 20px; /* Espaço para o vídeo */
+    border: 5px solid #333;
+    max-width: 640px; /* Largura típica de vídeo */
+    margin: 0 auto;
+}
+.video-placeholder p {
+    font-size: 1.2em;
+}
+
+
+/* Seções Genéricas */
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+}
+section:nth-child(even) { /* Alterna cor de fundo para algumas seções */
+    background-color: #ecf0f1; /* Cinza bem claro */
+}
+section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #2980b9; /* Azul um pouco mais escuro */
+}
+section ul {
+    list-style-type: none; /* Remove marcadores padrão */
+    padding-left: 0;
+}
+section ul li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+section ul li::before { /* Adiciona um marcador personalizado (Ex: check) */
+    content: '✓ '; /* Você pode usar um ícone de fonte aqui */
+    color: #27ae60; /* Verde */
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Ebook Solução */
+#solucao-ebook .ebook-presentation {
+    text-align: center;
+}
+.ebook-mockup {
+    max-width: 350px; /* Ajuste o tamanho do mockup */
+    margin-bottom: 20px;
+    display: block; /* Para que o margin auto funcione */
+}
+#solucao-ebook p {
+    font-size: 1.1em;
+    text-align: left; /* Ou center, conforme preferir */
+}
+
+
+/* Depoimentos */
+#depoimentos .testimonial {
+    background-color: #fff;
+    border-left: 5px solid #3498db; /* Destaque azul */
+    padding: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+#depoimentos .testimonial p::after {
+    content: attr(data-author);
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Oferta */
+#oferta {
+    background-color: #27ae60; /* Verde para a oferta */
+    color: #fff;
+    text-align: center;
+}
+#oferta h2 {
+    color: #fff;
+}
+#oferta ul {
+    text-align: left;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 0;
+}
+#oferta ul li {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 5px 0;
+}
+#oferta ul li::before {
+    color: #f1c40f; /* Amarelo para o check do bônus */
+}
+.valor-percebido {
+    text-decoration: line-through;
+    font-size: 1.1em;
+    opacity: 0.8;
+}
+.preco-especial {
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+.preco {
+    font-size: 3em;
+    font-weight: bold;
+    color: #f1c40f; /* Amarelo para o preço */
+    margin: 10px 0;
+}
+.preco-parcelado {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+.cta-button {
+    display: inline-block;
+    background-color: #f1c40f; /* Amarelo chamativo */
+    color: #2c3e50; /* Texto escuro para contraste */
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: none; /* Remove borda padrão de links/botões */
+    cursor: pointer; /* Indica que é clicável */
+}
+.cta-button:hover {
+    background-color: #f39c12; /* Amarelo mais escuro no hover */
+    transform: translateY(-2px); /* Efeito de levantar ao passar o mouse */
+}
+.secure-payment-icons {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+/* Garantia */
+#garantia {
+    text-align: center;
+}
+.selo-garantia {
+    max-width: 150px; /* Ajuste o tamanho do selo */
+    margin-bottom: 20px;
+}
+#garantia p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 15px auto;
+}
+
+/* FAQ */
+#faq details {
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+#faq summary {
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none; /* Remove o contorno padrão do foco */
+}
+#faq details[open] summary {
+    border-bottom: 1px solid #ddd;
+}
+#faq details p {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* Última Chamada */
+#ultima-chamada {
+    background-color: #34495e; /* Azul acinzentado escuro */
+    color: #ecf0f1;
+    text-align: center;
+}
+#ultima-chamada h2 {
+    color: #fff;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2c3e50; /* Mesmo azul do cabeçalho */
+    color: #bdc3c7; /* Cinza claro */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+footer a {
+    color: #ecf0f1; /* Branco suave para links */
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+.disclaimer {
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: #95a5a6; /* Cinza mais escuro */
+}
+
+/* Media Queries para Responsividade Básica */
+@media (max-width: 768px) {
+    #cabecalho h1 {
+        font-size: 2em;
+    }
+    section h2 {
+        font-size: 1.8em;
+    }
+    .cta-button {
+        font-size: 1.2em;
+        padding: 12px 25px;
+    }
+    .video-placeholder {
+        padding: 60px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    #cabecalho h1 {
+        font-size: 1.7em;
+    }
+    #cabecalho .subtitulo {
+        font-size: 1em;
+    }
+    section h2 {
+        font-size: 1.5em;
+    }
+     .cta-button {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
+    #oferta .preco {
+        font-size: 2.5em;
+    }
+}
